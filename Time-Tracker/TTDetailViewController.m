@@ -16,13 +16,27 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
+
+
 @end
 
 @implementation TTDetailViewController
 
+-(instancetype)init {
+    self = [super init];
+    if(self){
+        self.detailDataSource = [TTDetailViewControllerDataSource new];
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.tableView.dataSource = self.detailDataSource;
+    
+    
 }
 
 

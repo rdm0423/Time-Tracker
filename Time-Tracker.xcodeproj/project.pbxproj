@@ -26,6 +26,7 @@
 		FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FD21A9692B600792F5A /* TTProjectController.m */; };
 		FFE03FDB1A96A03D00792F5A /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */; };
 		FFE03FDC1A96A03D00792F5A /* TTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */; };
+		FFE03FE01A96A59600792F5A /* TTDetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FDF1A96A59600792F5A /* TTDetailViewControllerDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		FFE03FD81A96A03D00792F5A /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
 		FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
 		FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTDetailViewController.xib; sourceTree = "<group>"; };
+		FFE03FDE1A96A59600792F5A /* TTDetailViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewControllerDataSource.h; sourceTree = "<group>"; };
+		FFE03FDF1A96A59600792F5A /* TTDetailViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewControllerDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +216,18 @@
 				FFE03FD81A96A03D00792F5A /* TTDetailViewController.h */,
 				FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */,
 				FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */,
+				FFE03FE11A96A59B00792F5A /* DetailTableViewDataSource */,
 			);
 			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		FFE03FE11A96A59B00792F5A /* DetailTableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FDE1A96A59600792F5A /* TTDetailViewControllerDataSource.h */,
+				FFE03FDF1A96A59600792F5A /* TTDetailViewControllerDataSource.m */,
+			);
+			name = DetailTableViewDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +331,7 @@
 				FFE03FCA1A968F9100792F5A /* TTProject.m in Sources */,
 				FFE03FCE1A9691C200792F5A /* TTEntries.m in Sources */,
 				FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */,
+				FFE03FE01A96A59600792F5A /* TTDetailViewControllerDataSource.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				FFE03FDB1A96A03D00792F5A /* TTDetailViewController.m in Sources */,
 				FFE03FC41A9685EF00792F5A /* TTProjectViewController.m in Sources */,
