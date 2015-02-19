@@ -14,7 +14,6 @@ static NSString *const timeStampKey = @"timeStamp";
 
 @interface TTProject ()
 
-@property (nonatomic,strong) NSArray *entries;
 
 @end
 

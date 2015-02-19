@@ -8,6 +8,8 @@
 
 #import "TTProjectViewController.h"
 #import "TTListTableViewDataSource.h"
+#import "TTDetailViewController.h"
+#import "TTProjectController.h"
 
 @interface TTProjectViewController () <UITableViewDelegate>
 
@@ -45,6 +47,18 @@
     
 }
 
+// When project is selected, pushes to DetailViewController
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TTProject *project = [TTProjectController sharedInstance].projects[indexPath.row];
+    
+    TTDetailViewController *viewController = [TTDetailViewController new];
+    viewController.project = project;
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
 
 @end

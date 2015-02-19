@@ -8,6 +8,7 @@
 
 #import "TTDetailViewController.h"
 #import "TTProjectController.h"
+#import "TTDetailViewControllerDataSource.h"
 
 @interface TTDetailViewController () <UITextFieldDelegate>
 
@@ -15,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
-
+@property (nonatomic, strong) TTDetailViewControllerDataSource *dataSource;
 
 
 @end
@@ -36,6 +37,7 @@
     
     self.tableView.dataSource = self.detailDataSource;
     
+    self.dataSource.project = self.project;
     
 }
 

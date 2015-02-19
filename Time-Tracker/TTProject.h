@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSDate *timeStamp;
 @property (nonatomic, strong) NSString *text;
 
+@property (nonatomic,strong) NSArray *entries;
 
 -(NSDictionary *)entryDictionary;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
