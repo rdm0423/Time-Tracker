@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TTProject;
+
 @interface TTDetailViewController : UIViewController
+
+@property (nonatomic, strong) TTProject *project;
 
 @end

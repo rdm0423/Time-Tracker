@@ -16,5 +16,6 @@
 + (TTProjectController *)sharedInstance;
 -(void)removeProject:(TTProject *)project;
 -(void)addProject:(TTProject *)project;
+-(void)storeDefaultsInProjects;
 
 @end

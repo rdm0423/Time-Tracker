@@ -24,6 +24,8 @@
 		FFE03FCA1A968F9100792F5A /* TTProject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC91A968F9100792F5A /* TTProject.m */; };
 		FFE03FCE1A9691C200792F5A /* TTEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FCD1A9691C200792F5A /* TTEntries.m */; };
 		FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FD21A9692B600792F5A /* TTProjectController.m */; };
+		FFE03FDB1A96A03D00792F5A /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */; };
+		FFE03FDC1A96A03D00792F5A /* TTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		FFE03FCD1A9691C200792F5A /* TTEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEntries.m; sourceTree = "<group>"; };
 		FFE03FD11A9692B600792F5A /* TTProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProjectController.h; sourceTree = "<group>"; };
 		FFE03FD21A9692B600792F5A /* TTProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProjectController.m; sourceTree = "<group>"; };
+		FFE03FD81A96A03D00792F5A /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
+		FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
+		FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +133,7 @@
 				FFE03FCF1A9691C700792F5A /* Entries */,
 				FFE03FCB1A968F9600792F5A /* Project */,
 				FFE03FD41A9692BD00792F5A /* ProjectController */,
-				7116F78719421700006C8F06 /* Images.xcassets */,
+				FFE03FDD1A96A04800792F5A /* DetailViewController */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
 			path = "Time-Tracker";
@@ -137,6 +142,7 @@
 		7116F77C19421700006C8F06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77D19421700006C8F06 /* Time-Tracker-Info.plist */,
 				7116F77E19421700006C8F06 /* InfoPlist.strings */,
 				7116F78119421700006C8F06 /* main.m */,
@@ -199,6 +205,16 @@
 				FFE03FD21A9692B600792F5A /* TTProjectController.m */,
 			);
 			name = ProjectController;
+			sourceTree = "<group>";
+		};
+		FFE03FDD1A96A04800792F5A /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FD81A96A03D00792F5A /* TTDetailViewController.h */,
+				FFE03FD91A96A03D00792F5A /* TTDetailViewController.m */,
+				FFE03FDA1A96A03D00792F5A /* TTDetailViewController.xib */,
+			);
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +295,7 @@
 			files = (
 				7116F78019421700006C8F06 /* InfoPlist.strings in Resources */,
 				7116F78819421700006C8F06 /* Images.xcassets in Resources */,
+				FFE03FDC1A96A03D00792F5A /* TTDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +319,7 @@
 				FFE03FCE1A9691C200792F5A /* TTEntries.m in Sources */,
 				FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
+				FFE03FDB1A96A03D00792F5A /* TTDetailViewController.m in Sources */,
 				FFE03FC41A9685EF00792F5A /* TTProjectViewController.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,
 			);

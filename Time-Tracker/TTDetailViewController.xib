@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="tableView" destination="gk6-1T-X6F" id="1qJ-Wp-vrm"/>
                 <outlet property="timeLabel" destination="d51-Tm-5Lh" id="Ze4-3K-2ls"/>
-                <outlet property="titleTextField" destination="8PB-Yq-B7U" id="QdN-G0-dbi"/>
                 <outlet property="toolBar" destination="Nhp-CN-6Te" id="Vgo-1J-Cze"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,6 +22,9 @@
                     <rect key="frame" x="16" y="38" width="187" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="eus-mx-xv4"/>
+                    </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-1T-X6F">
                     <rect key="frame" x="8" y="179" width="304" height="336"/>
