@@ -21,6 +21,9 @@
 		7116F79B19421700006C8F06 /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F79A19421700006C8F06 /* Time_TrackerTests.m */; };
 		FFE03FC41A9685EF00792F5A /* TTProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC31A9685EF00792F5A /* TTProjectViewController.m */; };
 		FFE03FC71A9686AD00792F5A /* TTListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC61A9686AD00792F5A /* TTListTableViewDataSource.m */; };
+		FFE03FCA1A968F9100792F5A /* TTProject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC91A968F9100792F5A /* TTProject.m */; };
+		FFE03FCE1A9691C200792F5A /* TTEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FCD1A9691C200792F5A /* TTEntries.m */; };
+		FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FD21A9692B600792F5A /* TTProjectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		FFE03FC31A9685EF00792F5A /* TTProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProjectViewController.m; sourceTree = "<group>"; };
 		FFE03FC51A9686AD00792F5A /* TTListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTListTableViewDataSource.h; sourceTree = "<group>"; };
 		FFE03FC61A9686AD00792F5A /* TTListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTListTableViewDataSource.m; sourceTree = "<group>"; };
+		FFE03FC81A968F9100792F5A /* TTProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProject.h; sourceTree = "<group>"; };
+		FFE03FC91A968F9100792F5A /* TTProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProject.m; sourceTree = "<group>"; };
+		FFE03FCC1A9691C200792F5A /* TTEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEntries.h; sourceTree = "<group>"; };
+		FFE03FCD1A9691C200792F5A /* TTEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEntries.m; sourceTree = "<group>"; };
+		FFE03FD11A9692B600792F5A /* TTProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProjectController.h; sourceTree = "<group>"; };
+		FFE03FD21A9692B600792F5A /* TTProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProjectController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +124,10 @@
 			children = (
 				7116F78419421700006C8F06 /* TTAppDelegate.h */,
 				7116F78519421700006C8F06 /* TTAppDelegate.m */,
-				FFE03FC21A9685EF00792F5A /* TTProjectViewController.h */,
-				FFE03FC31A9685EF00792F5A /* TTProjectViewController.m */,
-				FFE03FC51A9686AD00792F5A /* TTListTableViewDataSource.h */,
-				FFE03FC61A9686AD00792F5A /* TTListTableViewDataSource.m */,
+				FFE03FD01A96927800792F5A /* ProjectTableView */,
+				FFE03FCF1A9691C700792F5A /* Entries */,
+				FFE03FCB1A968F9600792F5A /* Project */,
+				FFE03FD41A9692BD00792F5A /* ProjectController */,
 				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
@@ -152,6 +161,44 @@
 				7116F79719421700006C8F06 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFE03FCB1A968F9600792F5A /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FC81A968F9100792F5A /* TTProject.h */,
+				FFE03FC91A968F9100792F5A /* TTProject.m */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		FFE03FCF1A9691C700792F5A /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FCC1A9691C200792F5A /* TTEntries.h */,
+				FFE03FCD1A9691C200792F5A /* TTEntries.m */,
+			);
+			name = Entries;
+			sourceTree = "<group>";
+		};
+		FFE03FD01A96927800792F5A /* ProjectTableView */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FC21A9685EF00792F5A /* TTProjectViewController.h */,
+				FFE03FC31A9685EF00792F5A /* TTProjectViewController.m */,
+				FFE03FC51A9686AD00792F5A /* TTListTableViewDataSource.h */,
+				FFE03FC61A9686AD00792F5A /* TTListTableViewDataSource.m */,
+			);
+			name = ProjectTableView;
+			sourceTree = "<group>";
+		};
+		FFE03FD41A9692BD00792F5A /* ProjectController */ = {
+			isa = PBXGroup;
+			children = (
+				FFE03FD11A9692B600792F5A /* TTProjectController.h */,
+				FFE03FD21A9692B600792F5A /* TTProjectController.m */,
+			);
+			name = ProjectController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE03FC71A9686AD00792F5A /* TTListTableViewDataSource.m in Sources */,
+				FFE03FCA1A968F9100792F5A /* TTProject.m in Sources */,
+				FFE03FCE1A9691C200792F5A /* TTEntries.m in Sources */,
+				FFE03FD31A9692B600792F5A /* TTProjectController.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				FFE03FC41A9685EF00792F5A /* TTProjectViewController.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,

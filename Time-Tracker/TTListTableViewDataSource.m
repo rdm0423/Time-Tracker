@@ -7,6 +7,7 @@
 //
 
 #import "TTListTableViewDataSource.h"
+#import "TTProjectController.h"
 
 @interface TTListTableViewDataSource () 
 
@@ -21,7 +22,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 3;
+    return [[TTProjectController sharedInstance].projects count];
     
 }
 
@@ -30,6 +31,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    if (cell != nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
+    
+    TTProject *project = [TTProjectController sharedInstance].projects[indexPath.row];
+    
+    cell.textLabel.text = project.title;
+   // cell.detailTextLabel.text = project.timeStamp;
     
     return cell;
     
