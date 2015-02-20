@@ -19,6 +19,8 @@
 		7116F79119421700006C8F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116F77919421700006C8F06 /* UIKit.framework */; };
 		7116F79919421700006C8F06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7116F79719421700006C8F06 /* InfoPlist.strings */; };
 		7116F79B19421700006C8F06 /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F79A19421700006C8F06 /* Time_TrackerTests.m */; };
+		FF466C1B1A97EBB800F11D34 /* CustomEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF466C191A97EBB800F11D34 /* CustomEntryViewController.m */; };
+		FF466C1C1A97EBB800F11D34 /* CustomEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF466C1A1A97EBB800F11D34 /* CustomEntryViewController.xib */; };
 		FFE03FC41A9685EF00792F5A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC31A9685EF00792F5A /* ProjectViewController.m */; };
 		FFE03FC71A9686AD00792F5A /* ProjectViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC61A9686AD00792F5A /* ProjectViewDataSource.m */; };
 		FFE03FCA1A968F9100792F5A /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE03FC91A968F9100792F5A /* Project.m */; };
@@ -56,6 +58,9 @@
 		7116F79619421700006C8F06 /* Time-TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Time-TrackerTests-Info.plist"; sourceTree = "<group>"; };
 		7116F79819421700006C8F06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7116F79A19421700006C8F06 /* Time_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Time_TrackerTests.m; sourceTree = "<group>"; };
+		FF466C181A97EBB800F11D34 /* CustomEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryViewController.h; sourceTree = "<group>"; };
+		FF466C191A97EBB800F11D34 /* CustomEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryViewController.m; sourceTree = "<group>"; };
+		FF466C1A1A97EBB800F11D34 /* CustomEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomEntryViewController.xib; sourceTree = "<group>"; };
 		FFE03FC21A9685EF00792F5A /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		FFE03FC31A9685EF00792F5A /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 		FFE03FC51A9686AD00792F5A /* ProjectViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewDataSource.h; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 				FFE03FD41A9692BD00792F5A /* ProjectController */,
 				FFE03FCF1A9691C700792F5A /* Entry Object */,
 				FFE03FCB1A968F9600792F5A /* Project Object */,
+				FF466C1D1A97EBC000F11D34 /* CustomEntryView */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
 			path = "Time-Tracker";
@@ -179,6 +185,16 @@
 				FFE03FC61A9686AD00792F5A /* ProjectViewDataSource.m */,
 			);
 			name = ProjectViewDataSource;
+			sourceTree = "<group>";
+		};
+		FF466C1D1A97EBC000F11D34 /* CustomEntryView */ = {
+			isa = PBXGroup;
+			children = (
+				FF466C181A97EBB800F11D34 /* CustomEntryViewController.h */,
+				FF466C191A97EBB800F11D34 /* CustomEntryViewController.m */,
+				FF466C1A1A97EBB800F11D34 /* CustomEntryViewController.xib */,
+			);
+			name = CustomEntryView;
 			sourceTree = "<group>";
 		};
 		FFE03FCB1A968F9600792F5A /* Project Object */ = {
@@ -224,7 +240,7 @@
 				FFE03FD81A96A03D00792F5A /* DetailViewController.h */,
 				FFE03FD91A96A03D00792F5A /* DetailViewController.m */,
 				FFE03FDA1A96A03D00792F5A /* DetailViewController.xib */,
-				FFE03FE11A96A59B00792F5A /* DetailTableViewDataSource */,
+				FFE03FE11A96A59B00792F5A /* DetailViewDataSource */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -316,6 +332,7 @@
 			files = (
 				7116F78019421700006C8F06 /* InfoPlist.strings in Resources */,
 				7116F78819421700006C8F06 /* Images.xcassets in Resources */,
+				FF466C1C1A97EBB800F11D34 /* CustomEntryViewController.xib in Resources */,
 				FFE03FDC1A96A03D00792F5A /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +356,7 @@
 				FFE03FCA1A968F9100792F5A /* Project.m in Sources */,
 				FFE03FCE1A9691C200792F5A /* Entry.m in Sources */,
 				FFE03FD31A9692B600792F5A /* ProjectController.m in Sources */,
+				FF466C1B1A97EBB800F11D34 /* CustomEntryViewController.m in Sources */,
 				FFE03FE01A96A59600792F5A /* DetailViewDataSource.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				FFE03FDB1A96A03D00792F5A /* DetailViewController.m in Sources */,

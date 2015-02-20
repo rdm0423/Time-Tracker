@@ -9,6 +9,7 @@
 #import "TTAppDelegate.h"
 #import "ProjectViewController.h"
 #import "CustomEntryViewController.h"
+#import "DetailViewController.h"
 
 @implementation TTAppDelegate
 
@@ -16,11 +17,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    
-    // ProjectVC = rootVC
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[CustomEntryViewController new]];
+
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ProjectViewController new]];
     
-    CustomEntryViewController *cevc = [CustomEntryViewController new];
-    self.window.rootViewController = cevc;
+//    CustomEntryViewController *cevc = [CustomEntryViewController new];
+//    self.window.rootViewController = cevc;
+    
+//    DetailViewController *detailVC = [DetailViewController new];
+//    self.window.rootViewController = detailVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

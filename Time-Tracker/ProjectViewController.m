@@ -10,6 +10,7 @@
 #import "ProjectViewDataSource.h"
 #import "DetailViewController.h"
 #import "ProjectController.h"
+#import "Project.h"
 
 @interface ProjectViewController () <UITableViewDelegate>
 
@@ -45,6 +46,20 @@
     
     [self.dataSource registerTableView:self.tableView];
     
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newProject)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+}
+
+- (void)newProject {
+    
+    Project *project = [Project new];
+    [[ProjectController sharedInstance] addProject:project];
+    
+    DetailViewController *detailViewController = [DetailViewController new];
+    [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 
