@@ -33,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // Registering the picker for the update label methods
     [self.startTimePicker addTarget:self action:@selector(updateStartTimeLabel) forControlEvents:(UIControlEventValueChanged)];
     [self.endTImePIcker addTarget:self action:@selector(updateEndTimeLabel) forControlEvents:(UIControlEventValueChanged)];
 

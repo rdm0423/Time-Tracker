@@ -11,8 +11,10 @@
 #import "DetailViewDataSource.h"
 #import "Project.h"
 #import "CustomEntryViewController.h"
+#import <MessageUI/MessageUI.h>
+#import "Entry.h"
 
-@interface DetailViewController () <UITextFieldDelegate>
+@interface DetailViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -69,8 +71,29 @@
 
 - (IBAction)reportAction:(id)sender {
     
+    MFMailComposeViewController *mailer = [MFMailComposeViewController new];
+    mailer.mailComposeDelegate = self;
     
+    NSString *entryTimes = @"";
+    
+    for (Entry *entry in self.project.entries) {
+        if (entryTimes) {
+            entryTimes = [NSString stringWithFormat:@"%@\n%@ to %@\n", entryTimes, entry.startTime, entry.endTime];
+        } else {
+            entryTimes = [NSString stringWithFormat:@"\n%@ to %@\n", entry.startTime, entry.endTime];
+        }
+    }
+    
+    [mailer setMessageBody:entryTimes isHTML:NO];
+    
+    [self presentViewController:mailer animated:YES completion:nil];
 }
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 - (void)didReceiveMemoryWarning {
