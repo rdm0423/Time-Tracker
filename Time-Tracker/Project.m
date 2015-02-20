@@ -7,6 +7,8 @@
 //
 
 #import "Project.h"
+#import "Entry.h"
+#import "ProjectController.h"
 
 static NSString *const titleKey = @"title";
 static NSString *const textKey = @"text";
@@ -14,22 +16,24 @@ static NSString *const timeStampKey = @"timeStamp";
 
 @interface Project ()
 
+@property (nonatomic, strong) Entry *currentEntry;
 
 @end
 
 @implementation Project
 
--(void)addEntry {
+- (void)addEntry:(Entry *)entry {
+    
     
 }
 
--(void)removeEntry {
+- (void)removeEntry:(Entry *)entry {
     
 }
 
 #pragma mark - initWithDictionary
 // Converts dictionary to Project Object
--(id)initWithDictionary:(NSDictionary *)dictionary {
+- (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self){
         self.title = dictionary[titleKey];
@@ -41,7 +45,7 @@ static NSString *const timeStampKey = @"timeStamp";
 
 #pragma mark - entryDictionary
 // Converts Project object to dictionary form
--(NSDictionary *)entryDictionary {
+- (NSDictionary *)entryDictionary {
     NSMutableDictionary *entryDictionary = [NSMutableDictionary new];
     
     if(self.title){
@@ -54,6 +58,29 @@ static NSString *const timeStampKey = @"timeStamp";
         [entryDictionary setObject:self.timeStamp forKey:timeStampKey];
     }
     return entryDictionary;
+}
+
+- (void)startNewEntry {
+    
+    Entry *newEntry = [Entry new];
+    newEntry.startTime = [NSDate date];
+    
+    self.currentEntry = newEntry;
+    
+    [self addEntry:newEntry];
+    
+}
+
+- (void)endCurrentEntry {
+    
+    self.currentEntry.endTime = [NSDate date];
+    
+    [self synchronize];
+}
+
+
+- (void)synchronize {
+    [[ProjectController sharedInstance] storeDefaultsInProjects];
 }
 
 

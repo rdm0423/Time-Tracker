@@ -18,5 +18,7 @@
 
 -(NSDictionary *)entryDictionary;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
+- (void)startNewEntry;
+- (void)endCurrentEntry;
 
 @end
