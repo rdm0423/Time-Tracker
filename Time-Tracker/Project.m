@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTProject.h"
+#import "Project.h"
 
 static NSString *const titleKey = @"title";
 static NSString *const textKey = @"text";
 static NSString *const timeStampKey = @"timeStamp";
 
-@interface TTProject ()
+@interface Project ()
 
 
 @end
 
-@implementation TTProject
+@implementation Project
 
 -(void)addEntry {
     

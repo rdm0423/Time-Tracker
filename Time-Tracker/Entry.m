@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTEntries.h"
+#import "Entry.h"
 
 static NSString *const startKey = @"start";
 static NSString *const endKey = @"end";
 
-@implementation TTEntries
+@implementation Entry
 
 #pragma mark - initWithDictionary
 // Converts dictionary keys to Entry object properties

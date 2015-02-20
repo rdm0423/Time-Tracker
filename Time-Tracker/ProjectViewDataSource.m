@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTListTableViewDataSource.h"
-#import "TTProjectController.h"
+#import "ProjectViewDataSource.h"
+#import "ProjectController.h"
 
-@interface TTListTableViewDataSource () 
+@interface ProjectViewDataSource () 
 
 @end
 
-@implementation TTListTableViewDataSource
+@implementation ProjectViewDataSource
 
 -(void)registerTableView:(UITableView *)tableView
 {
@@ -22,7 +22,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [[TTProjectController sharedInstance].projects count];
+    return [[ProjectController sharedInstance].projects count];
     
 }
 
@@ -36,7 +36,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
-    TTProject *project = [TTProjectController sharedInstance].projects[indexPath.row];
+    Project *project = [ProjectController sharedInstance].projects[indexPath.row];
     
     cell.textLabel.text = project.title;
    // cell.detailTextLabel.text = project.timeStamp;

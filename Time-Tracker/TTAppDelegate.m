@@ -7,7 +7,7 @@
 //
 
 #import "TTAppDelegate.h"
-#import "TTProjectViewController.h"
+#import "ProjectViewController.h"
 
 @implementation TTAppDelegate
 
@@ -15,8 +15,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    
-    
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TTProjectViewController new]];
+    // ProjectVC = rootVC
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ProjectViewController new]];
     
     
     self.window.backgroundColor = [UIColor whiteColor];

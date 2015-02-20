@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTDetailViewController.h"
-#import "TTProjectController.h"
+#import "DetailViewController.h"
+#import "ProjectController.h"
 #import "TTDetailViewControllerDataSource.h"
 
-@interface TTDetailViewController () <UITextFieldDelegate>
+@interface DetailViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation TTDetailViewController
+@implementation DetailViewController
 
 -(instancetype)init {
     self = [super init];
@@ -78,7 +78,7 @@
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     
     self.project.text = textField.text;
-    [[TTProjectController sharedInstance] storeDefaultsInProjects];
+    [[ProjectController sharedInstance] storeDefaultsInProjects];
     
     return YES;
 }

@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "TTDetailViewControllerDataSource.h"
 
-@class TTProject;
+@class Project;
 
-@interface TTDetailViewController : UIViewController
+@interface DetailViewController : UIViewController
 
-@property (nonatomic, strong) TTProject *project;
+@property (nonatomic, strong) Project *project;
 
 @property (nonatomic, strong) TTDetailViewControllerDataSource *detailDataSource;
 

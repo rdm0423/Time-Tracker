@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTProjectController.h"
+#import "ProjectController.h"
 
 static NSString * const projectListKey = @"projectList";
 
-@interface TTProjectController ()
+@interface ProjectController ()
 
 @property (nonatomic, strong) NSArray *projects;
 
@@ -18,19 +18,19 @@ static NSString * const projectListKey = @"projectList";
 
 
 //  sharedInstance, add/remove project, loadFromDefaults, Synchronize
-@implementation TTProjectController
+@implementation ProjectController
 
-+ (TTProjectController *)sharedInstance {
-    static TTProjectController *sharedInstance = nil;
++ (ProjectController *)sharedInstance {
+    static ProjectController *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [TTProjectController new];
+        sharedInstance = [ProjectController new];
     });
     return sharedInstance;
 }
 
 // Converts
--(void)addProject:(TTProject *)project {
+-(void)addProject:(Project *)project {
     if (!project){
         return;
     }
@@ -42,7 +42,7 @@ static NSString * const projectListKey = @"projectList";
     [self storeDefaultsInProjects];
 }
 
--(void)removeProject:(TTProject *)project {
+-(void)removeProject:(Project *)project {
     if (!project){
         return;
     }
@@ -60,7 +60,7 @@ static NSString * const projectListKey = @"projectList";
     
     NSMutableArray *projects = [NSMutableArray new];
     for (NSDictionary *project in entryDictionaries) {
-        [projects addObject:[[TTProject alloc] initWithDictionary:project]];
+        [projects addObject:[[Project alloc] initWithDictionary:project]];
     }
     self.projects = projects;
 }
@@ -68,7 +68,7 @@ static NSString * const projectListKey = @"projectList";
 -(void)storeDefaultsInProjects {
     NSMutableArray *entryDictionaries = [NSMutableArray new];
     
-    for (TTProject *project in self.projects) {
+    for (Project *project in self.projects) {
         [entryDictionaries addObject:[project entryDictionary]];
     }
     

@@ -6,26 +6,27 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTProjectViewController.h"
-#import "TTListTableViewDataSource.h"
-#import "TTDetailViewController.h"
-#import "TTProjectController.h"
+#import "ProjectViewController.h"
+#import "ProjectViewDataSource.h"
+#import "DetailViewController.h"
+#import "ProjectController.h"
 
-@interface TTProjectViewController () <UITableViewDelegate>
+@interface ProjectViewController () <UITableViewDelegate>
 
-@property (nonatomic, strong) TTListTableViewDataSource *dataSource;
+@property (nonatomic, strong) ProjectViewDataSource *dataSource;
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation TTProjectViewController
+// View Controller containing project instances
+@implementation ProjectViewController
 
 - (instancetype) init {
     
     self = [super init];
     
     if (self) {
-        self.dataSource = [TTListTableViewDataSource new];
+        self.dataSource = [ProjectViewDataSource new];
     }
     return self;
     
@@ -52,9 +53,9 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    TTProject *project = [TTProjectController sharedInstance].projects[indexPath.row];
+    Project *project = [ProjectController sharedInstance].projects[indexPath.row];
     
-    TTDetailViewController *viewController = [TTDetailViewController new];
+    DetailViewController *viewController = [DetailViewController new];
     viewController.project = project;
     
     [self.navigationController pushViewController:viewController animated:YES];
