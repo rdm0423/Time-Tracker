@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "ProjectController.h"
 #import "DetailViewDataSource.h"
+#import "Project.h"
 
 @interface DetailViewController () <UITextFieldDelegate>
 
@@ -44,17 +45,21 @@
 
 - (IBAction)addAction:(id)sender {
     
-    
+
 }
 
 
 - (IBAction)checkInAction:(id)sender {
     
+    Project *project = [Project new];
+    [project startNewEntry];
     
 }
 
 - (IBAction)checkOutAction:(id)sender {
     
+    Project *project = [Project new];
+    [project endCurrentEntry];
     
 }
 
