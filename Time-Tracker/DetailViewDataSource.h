@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class TTProject;
+@class Project;
 
-@interface TTDetailViewControllerDataSource : NSObject <UITableViewDataSource>
+@interface DetailViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, strong) TTProject *project;
+@property (nonatomic, strong) Project *project;
 
 @end

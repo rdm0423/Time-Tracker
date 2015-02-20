@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TTListTableViewDataSource : NSObject <UITableViewDataSource>
+@interface ProjectViewDataSource : NSObject <UITableViewDataSource>
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 

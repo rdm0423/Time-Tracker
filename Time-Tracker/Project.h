@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TTProject : NSObject
+@interface Project : NSObject
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSDate *timeStamp;

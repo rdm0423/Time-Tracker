@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "TTDetailViewControllerDataSource.h"
-#import "TTProjectController.h"
-#import "TTEntries.h"
+#import "DetailViewDataSource.h"
+#import "ProjectController.h"
+#import "Entry.h"
 
 
-@implementation TTDetailViewControllerDataSource
+@implementation DetailViewDataSource
 
 
 
@@ -29,7 +29,7 @@
         tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"detailCell"];
     }
     
-    TTEntries *entry = [self.project entries][indexPath.row];
+    Entry *entry = [self.project entries][indexPath.row];
     
     tableViewCell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", entry.startTime, entry.endTime];
     

@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TTProject.h"
+#import "Project.h"
 
-@interface TTProjectController : NSObject
+@interface ProjectController : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *projects;
 
-+ (TTProjectController *)sharedInstance;
--(void)removeProject:(TTProject *)project;
--(void)addProject:(TTProject *)project;
++ (ProjectController *)sharedInstance;
+-(void)removeProject:(Project *)project;
+-(void)addProject:(Project *)project;
 -(void)storeDefaultsInProjects;
 
 @end
