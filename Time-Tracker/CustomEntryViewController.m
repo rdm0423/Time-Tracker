@@ -24,13 +24,28 @@
 
 @implementation CustomEntryViewController
 
+- (instancetype)init {
+    self = [super init];
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self.startTimePicker addTarget:self action:@selector(updateStartTimeLabel) forControlEvents:(UIControlEventValueChanged)];
+    [self.endTImePIcker addTarget:self action:@selector(updateEndTimeLabel) forControlEvents:(UIControlEventValueChanged)];
+
     
+}
+
+- (void)updateStartTimeLabel {
+    self.startTImeLabel.text = [self dateToString:self.startTimePicker.date];
     
-    
+}
+
+- (void)updateEndTimeLabel {
+    self.endTimeLabel.text = [self dateToString:self.endTImePIcker.date];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +66,11 @@
     entry.endTime = self.endTImePIcker.date;
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSString *)dateToString:(NSDate *)date {
+    return [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+    
 }
 
 /*
