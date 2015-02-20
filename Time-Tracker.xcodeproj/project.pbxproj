@@ -224,7 +224,7 @@
 				FFE03FD81A96A03D00792F5A /* DetailViewController.h */,
 				FFE03FD91A96A03D00792F5A /* DetailViewController.m */,
 				FFE03FDA1A96A03D00792F5A /* DetailViewController.xib */,
-				FFE03FE11A96A59B00792F5A /* DetailViewDataSource */,
+				FFE03FE11A96A59B00792F5A /* DetailTableViewDataSource */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
