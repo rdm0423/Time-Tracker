@@ -10,6 +10,7 @@
 #import "ProjectController.h"
 #import "DetailViewDataSource.h"
 #import "Project.h"
+#import "CustomEntryViewController.h"
 
 @interface DetailViewController () <UITextFieldDelegate>
 
@@ -44,8 +45,11 @@
 
 
 - (IBAction)addAction:(id)sender {
-    
 
+    CustomEntryViewController *customViewController = [CustomEntryViewController new];
+    customViewController.project = self.project;
+    [self presentViewController:customViewController animated:YES completion:nil];
+    
 }
 
 

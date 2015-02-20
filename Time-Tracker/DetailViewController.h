@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TTDetailViewControllerDataSource.h"
+#import "DetailViewDataSource.h"
 
 @class Project;
 
@@ -15,6 +15,6 @@
 
 @property (nonatomic, strong) Project *project;
 
-@property (nonatomic, strong) TTDetailViewControllerDataSource *detailDataSource;
+@property (nonatomic, strong) DetailViewDataSource *detailDataSource;
 
 @end
