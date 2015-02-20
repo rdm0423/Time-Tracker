@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Project.h"
 
 @interface CustomEntryViewController : UIViewController
+
+@property (nonatomic, strong) Project *project;
 
 @end
