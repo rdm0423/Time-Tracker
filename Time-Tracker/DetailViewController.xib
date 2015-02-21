@@ -55,7 +55,7 @@
                     <rect key="frame" x="74" y="133" width="173" height="47"/>
                     <color key="backgroundColor" red="0.77089251893939381" green="0.77089251893939381" blue="0.77089251893939381" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47" id="wrH-8K-rTf"/>
+                        <constraint firstAttribute="height" constant="47" id="jAU-kf-TH8"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -73,18 +73,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Nhp-CN-6Te" secondAttribute="trailing" id="0TM-ZZ-P11"/>
-                <constraint firstItem="d51-Tm-5Lh" firstAttribute="top" secondItem="8PB-Yq-B7U" secondAttribute="bottom" constant="8" id="4TH-2W-3ri"/>
-                <constraint firstItem="gk6-1T-X6F" firstAttribute="top" secondItem="d51-Tm-5Lh" secondAttribute="bottom" constant="8" id="560-2U-zQp"/>
-                <constraint firstItem="gk6-1T-X6F" firstAttribute="centerX" secondItem="Nhp-CN-6Te" secondAttribute="centerX" id="B2Z-cg-XNM"/>
-                <constraint firstItem="8PB-Yq-B7U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="95" id="Btt-D9-xei"/>
-                <constraint firstItem="8PB-Yq-B7U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="DsF-Qe-NkE"/>
-                <constraint firstItem="gk6-1T-X6F" firstAttribute="centerX" secondItem="d51-Tm-5Lh" secondAttribute="centerX" id="SxZ-zV-cvj"/>
-                <constraint firstAttribute="bottom" secondItem="Nhp-CN-6Te" secondAttribute="bottom" id="bHJ-5Z-Y2e"/>
-                <constraint firstItem="8PB-Yq-B7U" firstAttribute="centerX" secondItem="d51-Tm-5Lh" secondAttribute="centerX" id="huL-Ed-YB9"/>
-                <constraint firstItem="gk6-1T-X6F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="j5o-W4-Tz3"/>
-                <constraint firstItem="Nhp-CN-6Te" firstAttribute="top" secondItem="gk6-1T-X6F" secondAttribute="bottom" id="o6D-Kk-gvO"/>
-                <constraint firstItem="Nhp-CN-6Te" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t5N-SS-n8S"/>
+                <constraint firstItem="d51-Tm-5Lh" firstAttribute="centerX" secondItem="gk6-1T-X6F" secondAttribute="centerX" id="7jA-4I-YlV"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="top" secondItem="d51-Tm-5Lh" secondAttribute="bottom" constant="8" symbolic="YES" id="B9b-Z7-ELz"/>
+                <constraint firstAttribute="trailing" secondItem="Nhp-CN-6Te" secondAttribute="trailing" id="Gwt-eP-xyk"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="centerX" secondItem="Nhp-CN-6Te" secondAttribute="centerX" id="NV4-en-vuQ"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="centerX" secondItem="d51-Tm-5Lh" secondAttribute="centerX" id="Paz-CC-rRe"/>
+                <constraint firstItem="d51-Tm-5Lh" firstAttribute="top" secondItem="8PB-Yq-B7U" secondAttribute="bottom" constant="8" symbolic="YES" id="RC3-aK-8HR"/>
+                <constraint firstAttribute="bottom" secondItem="Nhp-CN-6Te" secondAttribute="bottom" id="YYF-C5-Xxe"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="ZMb-DR-sCJ"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="cdR-v4-0hX"/>
+                <constraint firstItem="Nhp-CN-6Te" firstAttribute="top" secondItem="gk6-1T-X6F" secondAttribute="bottom" id="l3N-OS-QTO"/>
+                <constraint firstItem="Nhp-CN-6Te" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sQ3-Mt-PJa"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="95" id="uQf-Ei-JHU"/>
             </constraints>
             <point key="canvasLocation" x="559" y="470"/>
         </view>

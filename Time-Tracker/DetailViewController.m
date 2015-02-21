@@ -43,12 +43,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"reef.png"]]];
+    
     self.titleTextField.text = self.project.title;
     self.titleTextField.delegate = self;
     self.timeLabel.text = [self.project projectTime];
     
     self.tableView.dataSource = self.detailDataSource;
     self.dataSource.project = self.project;
+    
+    
     
 }
 

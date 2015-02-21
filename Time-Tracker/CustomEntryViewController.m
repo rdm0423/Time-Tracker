@@ -33,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"reef.png"]]];
+    
     // Registering the picker for the update label methods
     [self.startTimePicker addTarget:self action:@selector(updateStartTimeLabel) forControlEvents:(UIControlEventValueChanged)];
     [self.endTImePIcker addTarget:self action:@selector(updateEndTimeLabel) forControlEvents:(UIControlEventValueChanged)];

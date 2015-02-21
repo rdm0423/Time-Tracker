@@ -45,6 +45,9 @@
     
     self.title = @"Time Hero";
     
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.opaque = NO;
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
     
@@ -73,6 +76,8 @@
 
 // When project is selected, pushes to DetailViewController
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"reef.png"]];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
