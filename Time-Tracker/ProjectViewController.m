@@ -59,6 +59,7 @@
     [[ProjectController sharedInstance] addProject:project];
     
     DetailViewController *detailViewController = [DetailViewController new];
+    detailViewController.project = project;
     [self.navigationController pushViewController:detailViewController animated:YES];
     
 }

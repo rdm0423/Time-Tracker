@@ -7,7 +7,8 @@
 //
 
 #import "CustomEntryViewController.h"
-#import "Entry.h"
+//#import "Entry.h"
+
 
 @interface CustomEntryViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
@@ -65,6 +66,8 @@
     Entry *entry = [Entry new];
     entry.startTime = self.startTimePicker.date;
     entry.endTime = self.endTImePIcker.date;
+    
+    [self.project addEntry:entry];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
