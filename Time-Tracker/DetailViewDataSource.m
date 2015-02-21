@@ -8,7 +8,7 @@
 
 #import "DetailViewDataSource.h"
 #import "ProjectController.h"
-#import "Entry.h"
+
 
 
 @implementation DetailViewDataSource
