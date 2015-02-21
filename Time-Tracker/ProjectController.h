@@ -14,8 +14,10 @@
 @property (nonatomic, strong, readonly) NSArray *projects;
 
 + (ProjectController *)sharedInstance;
+
 -(void)removeProject:(Project *)project;
 -(void)addProject:(Project *)project;
+
 -(void)storeDefaultsInProjects;
 
 @end

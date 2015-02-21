@@ -29,6 +29,13 @@ static NSString * const projectListKey = @"projectList";
     return sharedInstance;
 }
 
+//set Project code - eliminates need for syncronize in add/remove
+- (void)setProjects:(NSArray *)projects {
+    self.projects = projects;
+    [self storeDefaultsInProjects];
+}
+
+
 // Converts
 -(void)addProject:(Project *)project {
     if (!project){
@@ -39,7 +46,7 @@ static NSString * const projectListKey = @"projectList";
     [mutableProjects addObject:project];
     
     self.projects = mutableProjects;
-    [self storeDefaultsInProjects];
+//    [self storeDefaultsInProjects];
 }
 
 -(void)removeProject:(Project *)project {
@@ -51,7 +58,7 @@ static NSString * const projectListKey = @"projectList";
     [mutableProjects removeObject:project];
     
     self.projects = mutableProjects;
-    [self storeDefaultsInProjects];
+//    [self storeDefaultsInProjects];
 }
 
 
