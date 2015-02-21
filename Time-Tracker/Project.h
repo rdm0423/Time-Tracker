@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entry.h"
 
 @interface Project : NSObject
 
@@ -18,7 +19,14 @@
 
 -(NSDictionary *)entryDictionary;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
+
 - (void)startNewEntry;
 - (void)endCurrentEntry;
+
+- (void)addEntry:(Entry *)entry;
+- (void)removeEntry:(Entry *)entry;
+
+- (void)synchronize;
+
 
 @end
