@@ -20,6 +20,7 @@
 
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ProjectViewController new]];
     
+    
 //    CustomEntryViewController *cevc = [CustomEntryViewController new];
 //    self.window.rootViewController = cevc;
     

@@ -38,6 +38,8 @@
     
     [super viewDidLoad];
     
+    self.title = @"Time Hero";
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
     
