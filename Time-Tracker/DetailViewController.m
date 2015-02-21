@@ -79,7 +79,7 @@
     MFMailComposeViewController *mailer = [MFMailComposeViewController new];
     mailer.mailComposeDelegate = self;
     
-    NSString *entryTimes = @"";
+    NSString *entryTimes;
     
     for (Entry *entry in self.project.entries) {
         if (entryTimes) {
