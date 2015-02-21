@@ -30,10 +30,10 @@ static NSString * const projectListKey = @"projectList";
 }
 
 //set Project code - eliminates need for syncronize in add/remove
-- (void)setProjects:(NSArray *)projects {
-    self.projects = projects;
-    [self storeDefaultsInProjects];
-}
+//- (void)setProjects:(NSArray *)projects {
+//    self.projects = projects;
+//    [self storeDefaultsInProjects];
+//}
 
 
 // Converts
