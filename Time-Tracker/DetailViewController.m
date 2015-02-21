@@ -9,12 +9,11 @@
 #import "DetailViewController.h"
 #import "ProjectController.h"
 #import "DetailViewDataSource.h"
-#import "Project.h"
 #import "CustomEntryViewController.h"
 #import <MessageUI/MessageUI.h>
-#import "Entry.h"
 
-@interface DetailViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
+
+@interface DetailViewController () <UITextFieldDelegate, UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -35,12 +34,20 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.dataSource = self.detailDataSource;
+    self.titleTextField.text = self.project.title;
+    self.titleTextField.delegate = self;
+    self.timeLabel.text = [self.project projectTime];
     
+    self.tableView.dataSource = self.detailDataSource;
     self.dataSource.project = self.project;
     
 }
