@@ -64,16 +64,14 @@
 
 - (IBAction)checkInAction:(id)sender {
     
-    Project *project = [Project new];
-    [project startNewEntry];
-    
+    [self.project startNewEntry];
+    [self.tableView reloadData];
 }
 
 - (IBAction)checkOutAction:(id)sender {
     
-    Project *project = [Project new];
-    [project endCurrentEntry];
-    
+    [self.project endCurrentEntry];
+    [self.tableView reloadData];
 }
 
 - (IBAction)reportAction:(id)sender {
@@ -102,12 +100,6 @@
 }
 
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
@@ -121,5 +113,13 @@
     
     return YES;
 }
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 @end
