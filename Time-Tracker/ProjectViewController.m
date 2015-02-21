@@ -10,7 +10,7 @@
 #import "ProjectViewDataSource.h"
 #import "DetailViewController.h"
 #import "ProjectController.h"
-#import "Project.h"
+
 
 @interface ProjectViewController () <UITableViewDelegate>
 
@@ -30,9 +30,14 @@
         self.dataSource = [ProjectViewDataSource new];
     }
     return self;
-    
-    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 
 - (void)viewDidLoad {
     
