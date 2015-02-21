@@ -24,12 +24,28 @@ static NSString *const timeStampKey = @"timeStamp";
 
 - (void)addEntry:(Entry *)entry {
     
+    if (!entry) {
+        return;
+    }
+    
+    NSMutableArray *mutableEntries = [[NSMutableArray alloc] initWithArray:self.entries];
+    [mutableEntries addObject:entry];
+    self.entries = mutableEntries;
     
 }
 
+
 - (void)removeEntry:(Entry *)entry {
     
+    if (!entry) {
+        return;
+    }
+    
+    NSMutableArray *mutableEntries = self.entries.mutableCopy;
+    [mutableEntries removeObject:entry];
+    self.entries = mutableEntries;
 }
+
 
 #pragma mark - initWithDictionary
 // Converts dictionary to Project Object
