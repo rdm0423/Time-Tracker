@@ -22,6 +22,7 @@ static NSString *const timeStampKey = @"timeStamp";
 
 @implementation Project
 
+#pragma mark - add/remove entry
 - (void)addEntry:(Entry *)entry {
     
     if (!entry) {
@@ -97,6 +98,11 @@ static NSString *const timeStampKey = @"timeStamp";
 
 - (void)synchronize {
     [[ProjectController sharedInstance] storeDefaultsInProjects];
+}
+
+- (void)setEntries:(NSArray *)entries {
+    self.entries = entries;
+    [self synchronize];
 }
 
 
