@@ -46,7 +46,7 @@ static NSString * const projectListKey = @"projectList";
     [mutableProjects addObject:project];
     
     self.projects = mutableProjects;
-//    [self storeDefaultsInProjects];
+    [self storeDefaultsInProjects];
 }
 
 -(void)removeProject:(Project *)project {
@@ -58,7 +58,7 @@ static NSString * const projectListKey = @"projectList";
     [mutableProjects removeObject:project];
     
     self.projects = mutableProjects;
-//    [self storeDefaultsInProjects];
+    [self storeDefaultsInProjects];
 }
 
 

@@ -28,5 +28,6 @@
 
 - (void)synchronize;
 
+- (NSString *)projectTime;
 
 @end
