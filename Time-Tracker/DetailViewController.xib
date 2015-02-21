@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
@@ -17,19 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PB-Yq-B7U">
-                    <rect key="frame" x="16" y="38" width="187" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="eus-mx-xv4"/>
-                    </connections>
-                </textField>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-1T-X6F">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-1T-X6F">
                     <rect key="frame" x="8" y="179" width="304" height="336"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-CN-6Te">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-CN-6Te">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <items>
                         <barButtonItem title="Add" id="Rdu-s7-7F7">
@@ -57,14 +51,39 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d51-Tm-5Lh">
-                    <rect key="frame" x="101" y="100" width="119" height="47"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**Display Current Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d51-Tm-5Lh">
+                    <rect key="frame" x="74" y="100" width="173" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="wrH-8K-rTf"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PB-Yq-B7U">
+                    <rect key="frame" x="67" y="62" width="187" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="eus-mx-xv4"/>
+                    </connections>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="d51-Tm-5Lh" firstAttribute="top" secondItem="8PB-Yq-B7U" secondAttribute="bottom" constant="8" symbolic="YES" id="4TH-2W-3ri"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="top" secondItem="d51-Tm-5Lh" secondAttribute="bottom" constant="32" id="560-2U-zQp"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="centerX" secondItem="Nhp-CN-6Te" secondAttribute="centerX" id="B2Z-cg-XNM"/>
+                <constraint firstAttribute="bottom" secondItem="Nhp-CN-6Te" secondAttribute="bottom" id="Dsb-Rr-Xlp"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="FMQ-yJ-gdd"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="RbE-yD-4CW"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="centerX" secondItem="d51-Tm-5Lh" secondAttribute="centerX" id="SxZ-zV-cvj"/>
+                <constraint firstAttribute="trailing" secondItem="Nhp-CN-6Te" secondAttribute="trailing" id="Wby-9p-Q4k"/>
+                <constraint firstItem="gk6-1T-X6F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Zrd-KD-aUa"/>
+                <constraint firstItem="8PB-Yq-B7U" firstAttribute="centerX" secondItem="d51-Tm-5Lh" secondAttribute="centerX" id="huL-Ed-YB9"/>
+                <constraint firstItem="Nhp-CN-6Te" firstAttribute="top" secondItem="gk6-1T-X6F" secondAttribute="bottom" constant="9" id="o6D-Kk-gvO"/>
+                <constraint firstItem="Nhp-CN-6Te" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w22-MB-eP5"/>
+            </constraints>
             <point key="canvasLocation" x="559" y="470"/>
         </view>
     </objects>
