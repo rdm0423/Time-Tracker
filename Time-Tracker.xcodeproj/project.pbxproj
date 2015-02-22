@@ -302,7 +302,11 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = DevMountain;
 				TargetAttributes = {
+					7116F77119421700006C8F06 = {
+						DevelopmentTeam = 8859BW6G67;
+					};
 					7116F78C19421700006C8F06 = {
+						DevelopmentTeam = 8859BW6G67;
 						TestTargetID = 7116F77119421700006C8F06;
 					};
 				};
@@ -503,6 +507,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Time-Tracker.app/Time-Tracker";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,6 +522,7 @@
 				);
 				INFOPLIST_FILE = "Time-TrackerTests/Time-TrackerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -525,6 +532,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Time-Tracker.app/Time-Tracker";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -534,6 +543,7 @@
 				GCC_PREFIX_HEADER = "Time-Tracker/Time-Tracker-Prefix.pch";
 				INFOPLIST_FILE = "Time-TrackerTests/Time-TrackerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
